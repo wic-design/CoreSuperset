@@ -10,7 +10,7 @@ namespace DCSP {
     /// <summary>
     /// 验证码工具
     /// </summary>
-    class Captcha {
+    public class Captcha {
         static private Random random = new Random();
 
         /// <summary>

@@ -3,7 +3,6 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Threading.Tasks;
 
-namespace DCSP {
     /// <summary>
     /// DateTime时间类型扩展
     /// </summary>
@@ -22,5 +21,3 @@ namespace DCSP {
         }
 
     }
-
-}

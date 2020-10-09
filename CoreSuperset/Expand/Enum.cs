@@ -1,7 +1,6 @@
 ﻿using System;
 using System.ComponentModel;
 
-namespace DCSP {
     /// <summary>
     /// Enum枚举类型扩展
     /// </summary>
@@ -25,5 +24,3 @@ namespace DCSP {
                 return (attribArray[0] as DescriptionAttribute).Description;
         }
     }
-
-}

@@ -3,11 +3,11 @@ using System.Collections.Generic;
 using System.IO;
 using System.Text;
 
-namespace system.IO {
+namespace System.IO {
     /// <summary>
     /// 文件储存的简单封装
     /// </summary>
-    class EasyFile {
+    public class EasyFile {
 
         /// <summary>
         /// 字符串保存文件
@@ -51,7 +51,7 @@ namespace system.IO {
             Directory.CreateDirectory(path);  //创建文件夹(如果不存在)
 
             //构建写文件流对象
-            using (FileStream file = new FileStream(name, FileMode.Create, FileAccess.Write)) {
+            using (FileStream file = new FileStream(fileName, FileMode.Create, FileAccess.Write)) {
                 byte[] srcBuf = new Byte[fileStream.Length];
                 fileStream.Read(srcBuf, 0, srcBuf.Length);
                 file.Write(srcBuf, 0, srcBuf.Length);

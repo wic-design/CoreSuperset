@@ -6,7 +6,6 @@ using System.Linq;
 using System.Security.Cryptography;
 using System.Text;
 
-namespace DCSP {
     /// <summary>
     /// String字符串扩展方法
     /// </summary>
@@ -63,11 +62,11 @@ namespace DCSP {
         /// <param name="base64"></param>
         /// <param name="qualityLevel">压缩率，默认80</param>
         /// <returns></returns>
-        public static byte[] Base64ToBytes(this String base64, byte qualityLevel = 80) {
-
+        public static byte[] Base64ToBytes(this String base64, ImageFormat format = null, byte qualityLevel = 80) {
+        if (format == null) format = ImageFormat.Jpeg;
             var bmp = base64.Base64ToBitmap();
             //压缩参数
-            ImageCodecInfo imageEncoder = ImageCodecInfo.GetImageDecoders().FirstOrDefault(v => v.FormatID == ImageFormat.Png.Guid);
+            ImageCodecInfo imageEncoder = ImageCodecInfo.GetImageDecoders().FirstOrDefault(v => v.FormatID == format.Guid);
             var encoderParameters = new EncoderParameters(1);
             encoderParameters.Param[0] = new EncoderParameter(System.Drawing.Imaging.Encoder.Quality, qualityLevel);
 
@@ -80,4 +79,3 @@ namespace DCSP {
         }
 
     }
-}

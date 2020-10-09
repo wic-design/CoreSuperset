@@ -1,0 +1,173 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>CoreSuperset</name>
+    </assembly>
+    <members>
+        <member name="T:DateTimeHelper">
+            <summary>
+            DateTime时间类型扩展
+            </summary>
+        </member>
+        <member name="M:DateTimeHelper.GetTime(System.DateTime)">
+            <summary>
+            获取与js一致的时间戳
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="T:EnumHelper">
+            <summary>
+            Enum枚举类型扩展
+            </summary>
+        </member>
+        <member name="M:EnumHelper.ToDescription(System.Enum)">
+            <summary>
+            获取enum的描述属性[Description]的值值
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="T:StringHelper">
+            <summary>
+            String字符串扩展方法
+            </summary>
+        </member>
+        <member name="M:StringHelper.ToMD5(System.String)">
+            <summary>
+            md5加密
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:StringHelper.ToSha1(System.String)">
+            <summary>
+            Sha1加密
+            </summary>
+            <param name="value"></param>
+            <returns></returns>
+        </member>
+        <member name="M:StringHelper.Base64ToBitmap(System.String)">
+            <summary>
+            将base64字符串转换为图像
+            </summary>
+            <param name="base64"></param>
+            <returns></returns>
+        </member>
+        <member name="M:StringHelper.Base64ToBytes(System.String,System.Byte)">
+            <summary>
+            将base64字符串转换为图像字节流
+            </summary>
+            <param name="base64"></param>
+            <param name="qualityLevel">压缩率，默认80</param>
+            <returns></returns>
+        </member>
+        <member name="T:DCSP.Captcha">
+            <summary>
+            验证码工具
+            </summary>
+        </member>
+        <member name="M:DCSP.Captcha.CreateCode(System.Int32)">
+            <summary>
+            生成字符串验证码，可包含字母(不分大小写)和数字
+            </summary>
+            <param name="Count">生成的验证码位数</param>
+            <returns></returns>
+        </member>
+        <member name="M:DCSP.Captcha.CreatNumberCode(System.Int32)">
+            <summary>
+            生成数字验证码
+            </summary>
+            <param name="Count">生成的验证码位数</param>
+            <returns></returns>
+        </member>
+        <member name="M:DCSP.Captcha.CreatShortKey">
+            <summary>
+            生成不重复的短代码(不区分大小写)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DCSP.Captcha.CreatSShortKey">
+            <summary>
+            生成不重复的短代码(区分大小写,比CreatShortKey更短)
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="M:DCSP.Captcha.CodeToImg(System.String)">
+            <summary>
+            绘制base64的验证码的图片
+            </summary>
+            <param name="code">验证码</param>
+        </member>
+        <member name="T:System.IO.EasyFile">
+            <summary>
+            文件储存的简单封装
+            </summary>
+        </member>
+        <member name="M:System.IO.EasyFile.SaveFile(System.String,System.String,System.Text.Encoding)">
+            <summary>
+            字符串保存文件
+            </summary>
+            <param name="text"></param>
+            <param name="folder"></param>
+            <param name="fileName"></param>
+        </member>
+        <member name="M:System.IO.EasyFile.SaveFile(System.Byte[],System.String)">
+            <summary>
+            保存文件
+            </summary>
+            <param name="fileData">文件数据的byte[]</param>
+            <param name="objectName">路径及文件名</param>
+            <returns></returns>
+        </member>
+        <member name="M:System.IO.EasyFile.SaveFile(System.IO.Stream,System.String)">
+            <summary>
+            保存文件
+            </summary>
+            <param name="fileStream">文件流</param>
+            <param name="fileName">完整路径(路径+文件名)</param>
+        </member>
+        <member name="P:WeXin.JsSdk.jsapi_ticket">
+            <summary>
+            jsapi_ticket
+            </summary>
+        </member>
+        <member name="P:WeXin.JsSdk.jsapi_ticket_expires">
+            <summary>
+            jsapi_ticket过期时间
+            </summary>
+        </member>
+        <member name="T:WeXin.mp">
+            <summary>
+            微信公众号的基类
+            </summary>
+        </member>
+        <member name="P:WeXin.mp.appid">
+            <summary>
+            appid
+            </summary>
+        </member>
+        <member name="P:WeXin.mp.appSecret">
+            <summary>
+            appSecret
+            </summary>
+        </member>
+        <member name="P:WeXin.mp.global_token">
+            <summary>
+            全局token
+            </summary>
+        </member>
+        <member name="P:WeXin.mp.global_token_expires">
+            <summary>
+            全局token过期时间
+            </summary>
+        </member>
+        <member name="M:WeXin.mp.#ctor(System.String,System.String)">
+            <summary>
+            微信公众号的基类
+            </summary>
+            <param name="appid"></param>
+            <param name="appSecret"></param>
+        </member>
+    </members>
+</doc>
